@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mes dépenses</title>
 <meta name="theme-color" content="#0E7C86">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230E7C86%27/%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2727%27%20r%3D%2713%27%20fill%3D%27white%27/%3E%3Crect%20x%3D%2717%27%20y%3D%2746%27%20width%3D%2730%27%20height%3D%276%27%20rx%3D%273%27%20fill%3D%27white%27/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
@@ -357,6 +359,7 @@ $('impf').onchange=function(){
 $('bud').value=S.budget||'';$('inc').value=S.inc||'';$('cur').value=S.cur;$('dt').value=key(new Date());fillCat();renderCats();renderRec();applyRec();
 render();
 })();
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
 </script>
 </body>
 </html>
